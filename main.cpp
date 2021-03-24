@@ -12,10 +12,21 @@ int main() {
     std::ofstream MyFile("a-new-file.txt");
 
     // This writes to the file!
-    MyFile << "Hello World! My name is Elijah!";
+    MyFile << "Hello World! This is pretty fucking cool!";
 
     // We close it the file because of good practice (helps with memory space)!
     MyFile.close();
+
+    std::string myNewString;
+    // Plan on reading from the file "a-new-file"!
+    std::ifstream AnotherFile("a-new-file.txt");
+    // Use a while loop together with the getline() function to read the file line by line, it then stores the line in "myNewString".
+    while (getline(AnotherFile, myNewString)) {
+        // The text from the file then gets printed to the console.
+        std::cout << myNewString;
+    }
+    
+    AnotherFile.close();
 
     return 0;
 }
