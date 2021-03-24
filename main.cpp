@@ -7,5 +7,15 @@
 #include <fstream>
 
 int main() {
+
+    // Creates and opens a text file called "a-new-file.txt" with Myfile being the class name caller!
+    std::ofstream MyFile("a-new-file.txt");
+
+    // This writes to the file!
+    MyFile << "Hello World! My name is Elijah!";
+
+    // We close it the file because of good practice (helps with memory space)!
+    MyFile.close();
+
     return 0;
 }
